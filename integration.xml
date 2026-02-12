@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2026-02-12 15:47:39">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description>Automatically created by the system</description>
+<inserted/>
+<name>Default 1</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>eb3c1c94c30f72107779554d0501315d</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>7a6a2b41c3077a107779554d0501311c</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Universal Request">c1ddba4773b10010cbb654eb7df6a76b</application>
+<category>customer</category>
+<comments/>
+<name>sysevent_script_action_c862a42264525910f877e83b89670107</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sysevent_script_action"&gt;&lt;sysevent_script_action action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;condition_script&gt;event.parm1 == 'com.snc.universal_request'&lt;/condition_script&gt;&lt;description/&gt;&lt;event_name&gt;plugin.upgraded&lt;/event_name&gt;&lt;name&gt;Run clean upgrade for Universal Request&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[var upgradeEngine = new sn_uni_req.MobileUtahUpgradeEngine();
+upgradeEngine.cleanUpgradeLegacyCards();
+upgradeEngine.cleanUpgradeButtonInstance();
+
+var gr = new GlideRecord("sysevent_script_action");
+gr.get("sys_id", "c862a42264525910f877e83b89670107");
+if (gr.isValidRecord()) {
+    gr.setValue("active", false);
+    gr.update();
+    gs.info("Disabling the script action as it should only run once.");}]]&gt;&lt;/script&gt;&lt;synchronous&gt;false&lt;/synchronous&gt;&lt;sys_class_name&gt;sysevent_script_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-05 09:12:38&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;c862a42264525910f877e83b89670107&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Run clean upgrade for Universal Request&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Universal Request" source="sn_uni_req"&gt;c1ddba4773b10010cbb654eb7df6a76b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Universal Request"&gt;c1ddba4773b10010cbb654eb7df6a76b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_script_action_c862a42264525910f877e83b89670107&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;system&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-02-09 18:36:54&lt;/sys_updated_on&gt;&lt;/sysevent_script_action&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-252151308</payload_hash>
+<remote_update_set display_value="Default 1">7a6a2b41c3077a107779554d0501311c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>036a2b41c3077a107779554d0501311e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19c43b139ee0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<table>plugin.upgraded</table>
+<target_name>Run clean upgrade for Universal Request</target_name>
+<type>Script Action</type>
+<update_domain>global</update_domain>
+<update_guid>4d64bc94c543b2105209c80d2fd6cb47</update_guid>
+<update_guid_history>4d64bc94c543b2105209c80d2fd6cb47:-252151308,c964bc94f243b210e3a6850570f2c645:-1506373517</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Rest_integration_lite ">cdc215d0c347b2107779554d0501311d</application>
+<category>customer</category>
+<comments/>
+<name>sys_rest_message_fn_9d0575e0c30b36107779554d05013186</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn"><sys_rest_message_fn action="INSERT_OR_UPDATE"><authentication_type>inherit_from_parent</authentication_type><basic_auth_password/><basic_auth_profile/><basic_auth_user/><content/><function_name>Default GET</function_name><http_method>post</http_method><lock>false</lock><oauth2_profile/><protocol_name/><qualified_name>Send incident Out  [ Default GET ]</qualified_name><rest_endpoint>https://jsonplaceholder.typicode.com/posts</rest_endpoint><rest_message display_value="Send incident Out ">db04f560c30b36107779554d05013159</rest_message><sys_class_name>sys_rest_message_fn</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-02-10 17:57:44</sys_created_on><sys_id>9d0575e0c30b36107779554d05013186</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Default GET</sys_name><sys_package display_value="Rest_integration_lite " source="cdc215d0c347b2107779554d0501311d">cdc215d0c347b2107779554d0501311d</sys_package><sys_policy/><sys_scope display_value="Rest_integration_lite ">cdc215d0c347b2107779554d0501311d</sys_scope><sys_update_name>sys_rest_message_fn_9d0575e0c30b36107779554d05013186</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-02-12 15:17:01</sys_updated_on><use_basic_auth>false</use_basic_auth><use_mid_server/><use_mutual_auth>false</use_mutual_auth></sys_rest_message_fn></record_update>]]></payload>
+<payload_hash>291036314</payload_hash>
+<remote_update_set display_value="Default 1">7a6a2b41c3077a107779554d0501311c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>036a2b41c3077a107779554d0501315f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19c526d4e760000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<table/>
+<target_name>Default GET</target_name>
+<type>HTTP Method</type>
+<update_domain>global</update_domain>
+<update_guid>5e63e7c129c37a1053978ce17a634e0d</update_guid>
+<update_guid_history>5e63e7c129c37a1053978ce17a634e0d:291036314,950575e0600b3610eb88fdab6560d78b:-1066994194</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_cs_topic_63412c10c34f72107779554d050131b5</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_topic"><sys_cs_topic action="INSERT_OR_UPDATE"><active>true</active><applicability>true</applicability><autopilot_topic>false</autopilot_topic><cb_topic_id display_value="_first_installation_">3073d70953912210ee61833230e5e612</cb_topic_id><channels/><definition>{"id":"3073d70953912210ee61833230e5e612","name":"_PRVW__3b3aa42ad8b5404ab1641662fffeb899","system_topic":false,"autopilot_topic":false,"vendor_id":"c2f0b8f187033200246ddd4c97cb0bb9","applicability":"true","categories":[],"key_phrases":["_first_installation_"],"variables":[{"name":"__segment_trigger_6e88ef3dd7564dee91a95e6b85ee5828_done","type":"java.lang.Object","init_value":"false"},{"name":"previous_graph_node","type":"java.lang.Object"}],"fields":[{"type":"Reference","table_name":"sys_user","auto_select":false,"name":"user","unique":false,"key_phrases":[],"mask_type":"NONE","input_format_type":"","list":false,"expert_mode":false,"choices":[],"static_enum_list":[]},{"type":"Boolean","name":"RootDecisionBranch_032311667c994ab3ad67aefc5a4fbb56","unique":false,"default_value":"true","key_phrases":[],"mask_type":"NONE","input_format_type":"","list":false,"expert_mode":false,"choices":[],"static_enum_list":[]},{"type":"String","name":"__silent_StartGoal_4604818314fc47ea924b095101cbf818","unique":false,"key_phrases":[],"mask_type":"NONE","input_format_type":"","list":false,"expert_mode":false,"choices":[],"static_enum_list":[],"encrypt_if_secure":true},{"type":"String","name":"__silent_TerminateGoal_034cd8010de1459fa958bd7d9e79b042","unique":false,"key_phrases":[],"mask_type":"NONE","input_format_type":"","list":false,"expert_mode":false,"choices":[],"static_enum_list":[],"encrypt_if_secure":true},{"type":"String","name":"__silent_Branch_RootDecisionBranch_47a9f8936eba45458336ad6c160cf465","unique":false,"key_phrases":[],"mask_type":"NONE","input_format_type":"","list":false,"expert_mode":false,"choices":[],"static_enum_list":[],"encrypt_if_secure":true},{"type":"String","name":"__silent_TextOutputPrompt_3c5076fd593a4413b32a37efa43eda8e","unique":false,"key_phrases":[],"mask_type":"NONE","input_format_type":"","list":false,"expert_mode":false,"choices":[],"static_enum_list":[],"encrypt_if_secure":true},{"type":"String","name":"__silent_Decision_RootDecision_9f4f650513d74fd4a02051f469e36cb2","unique":false,"key_phrases":[],"mask_type":"NONE","input_format_type":"","list":false,"expert_mode":false,"choices":[],"static_enum_list":[],"encrypt_if_secure":true}],"actions":[],"tasks":[{"type":"Consumer to system","show_as_button":true,"name":"primary","description":"primary","applicability":"vaVars.__segment_trigger_6e88ef3dd7564dee91a95e6b85ee5828_done==false &amp;&amp; true","mode":"Qmode","key_phrases":[],"greeting_msg":"vaInputs.initialize(\"user\");vaInputs.initialize(\"RootDecisionBranch_032311667c994ab3ad67aefc5a4fbb56\");vaInputs.initialize(\"__silent_TerminateGoal_034cd8010de1459fa958bd7d9e79b042\");vaInputs.initialize(\"__silent_Branch_RootDecisionBranch_47a9f8936eba45458336ad6c160cf465\");vaInputs.initialize(\"__silent_TextOutputPrompt_3c5076fd593a4413b32a37efa43eda8e\");vaInputs.initialize(\"__silent_Decision_RootDecision_9f4f650513d74fd4a02051f469e36cb2\");vaInputs.initialize(\"__silent_StartGoal_4604818314fc47ea924b095101cbf818\");null;","fields":[{"name":"__silent_Decision_RootDecision_9f4f650513d74fd4a02051f469e36cb2","direction":"Input","required":true,"prompt_msg":"vaVars.previous_graph_node=\"RootDecision_for_goal_primary___RootDecision_9f4f650513d74fd4a02051f469e36cb2\";vaInputs.__silent_Decision_RootDecision_9f4f650513d74fd4a02051f469e36cb2=true;null;","confirm_msg_on_default_value":{"msg":"","val_for_confirm":true},"nlu_text_input":false,"nlu_confirmation_prompt":false,"cardFields":[],"expert_mode":false,"acknowledge_msg":"vaVars.previous_graph_node=\"RootDecision_for_goal_primary___RootDecision_9f4f650513d74fd4a02051f469e36cb2\";var ackMsg=null;ackMsg=null;vaInputs.RootDecisionBranch_032311667c994ab3ad67aefc5a4fbb56=true;(function() {vaInputs.__silent_Branch_RootDecisionBranch_47a9f8936eba45458336ad6c160cf465.reset();})();ackMsg;","metadata":{"type":"graph_node","node_id":"RootDecision_9f4f650513d74fd4a02051f469e36cb2","node_name":"RootDecision_for_goal_primary","predecessor_nodes":[],"next_node":"RootDecisionBranch_47a9f8936eba45458336ad6c160cf465","node_depth":1,"decision_stack":[],"loopback":{"from":[]}}},{"name":"__silent_Branch_RootDecisionBranch_47a9f8936eba45458336ad6c160cf465","applicable":"(vaVars.previous_graph_node==\"RootDecision_for_goal_primary___RootDecision_9f4f650513d74fd4a02051f469e36cb2\") &amp;&amp; (((vaInputs.RootDecisionBranch_032311667c994ab3ad67aefc5a4fbb56.getValue() == true)))","direction":"Input","required":true,"prompt_msg":"vaVars.previous_graph_node=\"RootDecisionBranch_47a9f8936eba45458336ad6c160cf465___RootDecisionBranch_47a9f8936eba45458336ad6c160cf465\";vaInputs.__silent_Branch_RootDecisionBranch_47a9f8936eba45458336ad6c160cf465=true;null;","confirm_msg_on_default_value":{"msg":"","val_for_confirm":true},"nlu_text_input":false,"nlu_confirmation_prompt":false,"cardFields":[],"expert_mode":false,"acknowledge_msg":"vaVars.previous_graph_node=\"RootDecisionBranch_47a9f8936eba45458336ad6c160cf465___RootDecisionBranch_47a9f8936eba45458336ad6c160cf465\";var ackMsg=null;ackMsg=null;(function() {vaInputs.__silent_StartGoal_4604818314fc47ea924b095101cbf818.reset();})();ackMsg;","metadata":{"type":"graph_node","node_id":"RootDecisionBranch_47a9f8936eba45458336ad6c160cf465","node_name":"RootDecisionBranch_47a9f8936eba45458336ad6c160cf465","predecessor_nodes":["RootDecision_for_goal_primary"],"next_node":"Start","node_depth":2,"decision_stack":["RootDecision_for_goal_primary"],"loopback":{"from":[]}}},{"name":"__silent_StartGoal_4604818314fc47ea924b095101cbf818","applicable":"(vaVars.previous_graph_node==\"RootDecisionBranch_47a9f8936eba45458336ad6c160cf465___RootDecisionBranch_47a9f8936eba45458336ad6c160cf465\")","direction":"Input","required":true,"prompt_msg":"vaVars.previous_graph_node=\"Start___4604818314fc47ea924b095101cbf818\";vaInputs.__silent_StartGoal_4604818314fc47ea924b095101cbf818=true;null;","confirm_msg_on_default_value":{"msg":"","val_for_confirm":true},"nlu_text_input":false,"nlu_confirmation_prompt":false,"cardFields":[],"expert_mode":false,"acknowledge_msg":"vaVars.previous_graph_node=\"Start___4604818314fc47ea924b095101cbf818\";var ackMsg=null;ackMsg=null;(function() {vaInputs.__silent_TextOutputPrompt_3c5076fd593a4413b32a37efa43eda8e.reset();})();ackMsg;","metadata":{"type":"graph_node","node_id":"4604818314fc47ea924b095101cbf818","node_name":"Start","predecessor_nodes":["RootDecisionBranch_47a9f8936eba45458336ad6c160cf465"],"next_node":"Welcome message","node_depth":3,"decision_stack":["RootDecision_for_goal_primary"],"loopback":{"from":[]}}},{"name":"__silent_TextOutputPrompt_3c5076fd593a4413b32a37efa43eda8e","applicable":"(vaVars.previous_graph_node==\"Start___4604818314fc47ea924b095101cbf818\")","direction":"Input","required":true,"prompt_msg":"vaVars.previous_graph_node=\"Welcome message___3c5076fd593a4413b32a37efa43eda8e\";vaInputs.__silent_TextOutputPrompt_3c5076fd593a4413b32a37efa43eda8e=true;null;","confirm_msg_on_default_value":{"msg":"","val_for_confirm":true},"nlu_text_input":false,"nlu_confirmation_prompt":false,"cardFields":[],"expert_mode":false,"isCollapsible":true,"request_feedback":true,"acknowledge_msg":"vaVars.previous_graph_node=\"Welcome message___3c5076fd593a4413b32a37efa43eda8e\";var ackMsg=null;ackMsg=(function execute() {var textVariations = [function() { return (function execute() {\n    return gs.getMessageLang(\"Welcome to Now Virtual Agent. I'm here to help you. To begin, click Start or type hi. Anytime you want to start over, type restart.\", vaContext.getRequesterLang())\n})()\n }];if (vaContext.global_record_in_progress) return textVariations[0]();var index = Math.floor(Math.random() * textVariations.length);return textVariations[index]();})();(function() {vaInputs.__silent_TerminateGoal_034cd8010de1459fa958bd7d9e79b042.reset();})();ackMsg;","acknowledge_msg_mask_type":"NONE","metadata":{"type":"graph_node","node_id":"3c5076fd593a4413b32a37efa43eda8e","node_name":"Welcome message","predecessor_nodes":["Start"],"next_node":"End","node_depth":4,"decision_stack":["RootDecision_for_goal_primary"],"loopback":{"from":[]}}},{"name":"__silent_TerminateGoal_034cd8010de1459fa958bd7d9e79b042","applicable":"(vaVars.previous_graph_node==\"Welcome message___3c5076fd593a4413b32a37efa43eda8e\")","direction":"Input","required":true,"prompt_msg":"vaVars.previous_graph_node=\"End___034cd8010de1459fa958bd7d9e79b042\";vaInputs.__silent_TerminateGoal_034cd8010de1459fa958bd7d9e79b042=true;null;","confirm_msg_on_default_value":{"msg":"","val_for_confirm":true},"nlu_text_input":false,"nlu_confirmation_prompt":false,"cardFields":[],"expert_mode":false,"acknowledge_msg":"vaVars.previous_graph_node=\"End___034cd8010de1459fa958bd7d9e79b042\";var ackMsg=null;ackMsg=null;vaVars.__segment_trigger_6e88ef3dd7564dee91a95e6b85ee5828_done=true;ackMsg;","metadata":{"type":"graph_node","node_id":"034cd8010de1459fa958bd7d9e79b042","node_name":"End","predecessor_nodes":["Welcome message"],"node_depth":5,"decision_stack":["RootDecision_for_goal_primary"],"loopback":{"from":[]}}}],"variables_update":[]}],"roles":["public"],"active":true,"published":false,"library":false,"expose_on_palette":false,"palette_label":"","flexible_conversation_switching":false,"design_categories":[],"nlu_provider":"","nlu_model":"","nlu_intent":"","topic_type":"STANDARD","channels":[],"triggerable_by_notification":false,"secure_custom_input_control":false,"foundational":false,"modelType":"nlu_keyword","score":0.0,"visible":false,"discoverable":false,"sys_scope":"global","sys_domain":"global","title":"_first_installation_","nlu_intent_label":"","nlu_model_label":"","dialog_acts_enabled":false,"modify_confirmation_enabled":false}</definition><description/><design_category/><dialog_acts_enabled>false</dialog_acts_enabled><discoverable>false</discoverable><expose_on_palette>false</expose_on_palette><flexible_conversation_switching>false</flexible_conversation_switching><foundational>false</foundational><input_variables>[]</input_variables><is_system_topic>false</is_system_topic><key_phrases>_first_installation_</key_phrases><last_published_on>2026-02-09 17:13:30</last_published_on><library>false</library><library_usage>null</library_usage><metaphone/><model_type>nlu_keyword</model_type><modify_confirmation_enabled>false</modify_confirmation_enabled><name>_PRVW__3b3aa42ad8b5404ab1641662fffeb899</name><nlu_intent/><nlu_intent_label/><nlu_model/><nlu_model_label/><nlu_provider/><palette_label/><published>false</published><roles>public</roles><secure_custom_input_control>false</secure_custom_input_control><sys_class_name>sys_cs_topic</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-02-09 17:13:30</sys_created_on><sys_domain>global</sys_domain><sys_id>63412c10c34f72107779554d050131b5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>_PRVW__3b3aa42ad8b5404ab1641662fffeb899</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_cs_topic_63412c10c34f72107779554d050131b5</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-02-09 17:13:30</sys_updated_on><title>_first_installation_</title><triggerable_by_notification>false</triggerable_by_notification><type>STANDARD</type><vendor display_value="ServiceNow">c2f0b8f187033200246ddd4c97cb0bb9</vendor><visible>false</visible></sys_cs_topic><sys_translated_text action="delete_multiple" query="documentkey=63412c10c34f72107779554d050131b5"/></record_update>]]></payload>
+<payload_hash>-966031344</payload_hash>
+<remote_update_set display_value="Default 1">7a6a2b41c3077a107779554d0501311c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>076a2b41c3077a107779554d0501311f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19c4364e1970000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<table/>
+<target_name>_PRVW__3b3aa42ad8b5404ab1641662fffeb899</target_name>
+<type>Topic</type>
+<update_domain>global</update_domain>
+<update_guid>e3412c10c14f7210ce02101a0478a5be</update_guid>
+<update_guid_history>e3412c10c14f7210ce02101a0478a5be:-966031344</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_upgrade_plan_item_5bbe6498c3cf72107779554d05013112</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_upgrade_plan_item"><sys_upgrade_plan_item action="INSERT_OR_UPDATE"><active>true</active><additional_parameters/><auto_generated>false</auto_generated><customization_version/><id>com.glide.cs.chatbot</id><last_published/><last_refreshed/><name>Glide Virtual Agent</name><notes/><scope>global</scope><source/><state/><status_message/><sys_class_name>sys_upgrade_plan_item</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-02-09 18:12:11</sys_created_on><sys_id>5bbe6498c3cf72107779554d05013112</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Glide Virtual Agent</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_upgrade_plan_item_5bbe6498c3cf72107779554d05013112</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-02-09 18:12:11</sys_updated_on><type>plugin</type><upgrade_plan/><version>1.0.0</version></sys_upgrade_plan_item></record_update>]]></payload>
+<payload_hash>1399376543</payload_hash>
+<remote_update_set display_value="Default 1">7a6a2b41c3077a107779554d0501311c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>076a2b41c3077a107779554d05013160</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19c439a9c8c0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<table/>
+<target_name>Glide Virtual Agent</target_name>
+<type>App Install</type>
+<update_domain>global</update_domain>
+<update_guid>9fbe649890cf7210560ed002add84449</update_guid>
+<update_guid_history>9fbe649890cf7210560ed002add84449:1399376543</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Service Catalog for mobile">2263a68187032300e0ef0cf888cb0b3f</application>
+<category>customer</category>
+<comments/>
+<name>sysevent_script_action_39eb990377ee511059018f1a5b5a99b7</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sysevent_script_action"&gt;&lt;sysevent_script_action action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;condition_script&gt;event.parm1 == 'com.snc.universal_request'  ||  event.parm1 == 'sn_scmobile'&lt;/condition_script&gt;&lt;description/&gt;&lt;event_name&gt;plugin.upgraded&lt;/event_name&gt;&lt;name&gt;Catalog mobile upgrade for UR card&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[gs.info("Starting of catalog mobile upgrade script for universal request card.");
+//Primary ticket as task view
+var legacyCardMap = {
+    "26dc56b6731200105788e1e54cf6a7ab": {
+        "sys_sg_form_screen": "25e45ac9bc322010f877b42c9e173b6d",
+        "sys_sg_master_item": ""
+    }
+};
+new global.CatalogMobileUpgradeUtil().cleanItemViewUpgrade(legacyCardMap);
+
+gs.info("Completed the catalog mobile upgrade script for universal request card.");
+
+
+//De activate the script once it is completed the execution
+
+var gr = new GlideRecord("sysevent_script_action");
+gr.addQuery("sys_id", "39eb990377ee511059018f1a5b5a99b7");
+gr.query();
+if (gr.next()) {
+    gr.setValue("active", false);
+    gr.update();
+}]]&gt;&lt;/script&gt;&lt;synchronous&gt;false&lt;/synchronous&gt;&lt;sys_class_name&gt;sysevent_script_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-19 12:56:12&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;39eb990377ee511059018f1a5b5a99b7&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Catalog mobile upgrade for UR card&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Service Catalog for mobile" source="sn_scmobile"&gt;2263a68187032300e0ef0cf888cb0b3f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Service Catalog for mobile"&gt;2263a68187032300e0ef0cf888cb0b3f&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_script_action_39eb990377ee511059018f1a5b5a99b7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;system&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-02-09 18:36:53&lt;/sys_updated_on&gt;&lt;/sysevent_script_action&gt;&lt;/record_update&gt;</payload>
+<payload_hash>175800398</payload_hash>
+<remote_update_set display_value="Default 1">7a6a2b41c3077a107779554d0501311c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>326a2b41c3077a107779554d0501311d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19c43b138980000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<table>plugin.upgraded</table>
+<target_name>Catalog mobile upgrade for UR card</target_name>
+<type>Script Action</type>
+<update_domain>global</update_domain>
+<update_guid>4164bc941443b2107ecd48ce364c1e37</update_guid>
+<update_guid_history>4164bc941443b2107ecd48ce364c1e37:175800398,4d64bc948043b210d9fa2d25093cc82c:-299720529</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_efdade8353103110f9caddeeff7b12ea</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Property to store the value of last run of depreciation job</description><ignore_cache>true</ignore_cache><is_private>false</is_private><name>sn_itam_depreciation_job_last_run</name><read_roles/><suffix/><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-08-01 13:38:21</sys_created_on><sys_id>efdade8353103110f9caddeeff7b12ea</sys_id><sys_mod_count>16</sys_mod_count><sys_name>sn_itam_depreciation_job_last_run</sys_name><sys_package display_value="Depreciation" source="com.snc.depreciation">be5670fbbdb222104f34afdd794b6a18</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_properties_efdade8353103110f9caddeeff7b12ea</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2026-02-12 07:08:27</sys_updated_on><type>string</type><value>2026-02-12</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=efdade8353103110f9caddeeff7b12ea"/></record_update>]]></payload>
+<payload_hash>-869363482</payload_hash>
+<remote_update_set display_value="Default 1">7a6a2b41c3077a107779554d0501311c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>436a2b41c3077a107779554d0501315e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19c50ae07c10000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<table/>
+<target_name>sn_itam_depreciation_job_last_run</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>0e937d891f473a10edf154e5936b3a01</update_guid>
+<update_guid_history>0e937d891f473a10edf154e5936b3a01:-869363482,ac2623b61d323210f287b72b17d7b6d4:-1438809982,b0359298c6323210d68525b154dbe64c:-397230496,b8df9e1db12a3a1064cacd2e61db5a68:-1007351746,4b2a36c3ce167a10dc0e4143ded7f9e6:-1149713371,72c25afc0b5ab61032268929e3e61dec:-1719159871,b3d7ea661aca3a10f0c61a6a4548f90b:1812216256,028b01e4be02321051f3f0ab9065e689:1669854631,b7515b814931321091d439c0e76a245d:1039396006,f14775f326003210dc0a6652728c7983:-722900659,9466cdf7b43e2210dde1f2503ca6aebf:-1283600437,1866cdf7683e2210cc8edb8fe0bf787d:-585285876</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Rest_integration_lite ">cdc215d0c347b2107779554d0501311d</application>
+<category>customer</category>
+<comments/>
+<name>sys_app_cdc215d0c347b2107779554d0501311d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app"><sys_app action="INSERT_OR_UPDATE"><active>true</active><can_edit_in_studio>true</can_edit_in_studio><enforce_license>none</enforce_license><guided_setup_guid/><hide_on_ui>false</hide_on_ui><ide_created>SNS</ide_created><installed_as_dependency>false</installed_as_dependency><js_level>helsinki_es5</js_level><licensable>true</licensable><license/><license_category>none</license_category><license_definition/><license_model>none</license_model><logo/><menu/><name>Rest_integration_lite </name><package_json/><private>false</private><restrict_table_access>false</restrict_table_access><runtime_access_tracking>permissive</runtime_access_tracking><scope>global</scope><scoped_administration>false</scoped_administration><short_description/><source>cdc215d0c347b2107779554d0501311d</source><store_correlation_id/><store_url/><subscription_entitlement/><sys_class_name>sys_app</sys_class_name><sys_code/><sys_created_by>admin</sys_created_by><sys_created_on>2026-02-09 20:49:36</sys_created_on><sys_id>cdc215d0c347b2107779554d0501311d</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-02-09 20:49:36</sys_updated_on><template/><trackable>true</trackable><uninstall_blocked>false</uninstall_blocked><user_role/><vendor/><vendor_prefix/><version>1.0.0</version></sys_app><sys_translated_text action="delete_multiple" query="documentkey=cdc215d0c347b2107779554d0501311d"/></record_update>]]></payload>
+<payload_hash>-1272588651</payload_hash>
+<remote_update_set display_value="Default 1">7a6a2b41c3077a107779554d0501311c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>476a2b41c3077a107779554d0501311e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19c442ab8350000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<table/>
+<target_name>Rest_integration_lite </target_name>
+<type>Custom Application</type>
+<update_domain>global</update_domain>
+<update_guid>81c215d0ab47b2102eefa3b184bc792b</update_guid>
+<update_guid_history>81c215d0ab47b2102eefa3b184bc792b:-1272588651</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Incident_Lite">219ca168c30632107779554d050131df</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_6e5fa528c3c736107779554d0501318e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>create</operation><source_scope display_value="Incident_Lite">219ca168c30632107779554d050131df</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-02-10 17:32:59</sys_created_on><sys_id>6e5fa528c3c736107779554d0501318e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sc_task</sys_name><sys_package display_value="Incident_Lite" source="x_884051_inciden_0">219ca168c30632107779554d050131df</sys_package><sys_policy/><sys_scope display_value="Incident_Lite">219ca168c30632107779554d050131df</sys_scope><sys_update_name>sys_scope_privilege_6e5fa528c3c736107779554d0501318e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-02-10 17:32:59</sys_updated_on><target_name>sc_task</target_name><target_scope display_value="Global">global</target_scope><target_type>sys_db_object</target_type></sys_scope_privilege></record_update>]]></payload>
+<payload_hash>2009518219</payload_hash>
+<remote_update_set display_value="Default 1">7a6a2b41c3077a107779554d0501311c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>476a2b41c3077a107779554d0501315f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19c489d11ba0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<table/>
+<target_name>sc_task</target_name>
+<type>Cross scope privilege</type>
+<update_domain>global</update_domain>
+<update_guid>2e5fa528b0c73610a427703e8bc61db8</update_guid>
+<update_guid_history>2e5fa528b0c73610a427703e8bc61db8:2009518219</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_62ca7385c37d32107779554d0501319c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description/><ignore_cache>false</ignore_cache><is_private>false</is_private><name>dev_pro_dev_pdi_homepage_lets_go_link_click_count</name><read_roles/><suffix/><sys_class_name>sys_properties</sys_class_name><sys_created_by>developer.program.hop@snc</sys_created_by><sys_created_on>2025-12-12 13:40:39</sys_created_on><sys_id>62ca7385c37d32107779554d0501319c</sys_id><sys_mod_count>29</sys_mod_count><sys_name>dev_pro_dev_pdi_homepage_lets_go_link_click_count</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy>read</sys_policy><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_properties_62ca7385c37d32107779554d0501319c</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2026-02-11 15:28:11</sys_updated_on><type>string</type><value>29</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=62ca7385c37d32107779554d0501319c"/></record_update>]]></payload>
+<payload_hash>-120789845</payload_hash>
+<remote_update_set display_value="Default 1">7a6a2b41c3077a107779554d0501311c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>4b6a2b41c3077a107779554d0501311f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19c4d5147a20000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<table/>
+<target_name>dev_pro_dev_pdi_homepage_lets_go_link_click_count</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>4e6c9e3c7ecbb610cda3267bb931a300</update_guid>
+<update_guid_history>4e6c9e3c7ecbb610cda3267bb931a300:-120789845,9ef19550bf47b21005ce0188b425ef39:-141127220,5d0410942ccb72102b2f8b261673d906:-161464595,5df2f097533ab210d3b1efb0a3c4f38e:-181801970,7e9623ba5a323210c5d70cc004126cc0:-202139345,202f807510baba104eaf5cd09b823dc7:-222476720,29502210a5b2321070f6f1f3d5a0665c:-242814095,4b634c220ea23210396c80ac6ce47635:-263151470,9513dbf1f92e3e10846a290e0e9494fa:-283488845,37e7da71d3663e1030e37c1675db744b:-303826220,09d7252d5722ba1017dac4ca596b0e85:-751248470,35eb45a5366e7a10c7983defba572b1e:-771585845,a43a4ca5a5667a10de352e87000f88fb:-791923220,080171a8f6e6b21023fb871afe3a3b63:-812260595,4b2cc9a0c0e2b210dfcb8c69f3331335:-832597970,ffb6ec689fae72100fdb4a964bdd4218:-852935345,e8aaa894b6223210ef21233740c5e35d:-873272720,16bf3197815632108b4ccd1cfe0243a0:-893610095,d2361d97881232107baa010fad0c5329:-913947470,40e3eb397d1232103d057ab52d0f1571:-934284845,96095115b912ba100eee53b4c70eca6b:-627640395,40fcb7f82e96f6104b6918a5eef80ccc:-647977770,99fb2e08225272109644c1929ca81549:-668315145,d593754a74c636101d3a0d02fae07256:-688652520,f9f7e93940c6b210a463aafed7c65ca4:-708989895,df3d74b4934e721083419d75a2aa345b:-729327270,05cac2a0030a321035197fbc5ab48fbe:-749664645,de4c21280a0632100612fc64af92ee12:-770002020,a4569cd5543572103e9102dc284b3433:-790339395,94dab385ef7d32106f3b3f89b9164f15:-810676770</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Rest_integration_lite ">cdc215d0c347b2107779554d0501311d</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_definition_59745994c347b2107779554d050131b3</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition"><sys_ws_definition action="INSERT_OR_UPDATE"><active>true</active><base_uri>/api/884051/incident_api</base_uri><consumes>application/json,application/xml,text/xml</consumes><consumes_customized>false</consumes_customized><default_version>No active default version</default_version><doc_link/><enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl><is_versioned>false</is_versioned><name>Incident API</name><namespace>884051</namespace><produces>application/json,application/xml,text/xml</produces><produces_customized>false</produces_customized><service_id>incident_api</service_id><short_description/><sys_class_name>sys_ws_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-02-09 20:57:21</sys_created_on><sys_id>59745994c347b2107779554d050131b3</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Incident API</sys_name><sys_package display_value="Rest_integration_lite " source="cdc215d0c347b2107779554d0501311d">cdc215d0c347b2107779554d0501311d</sys_package><sys_policy/><sys_scope display_value="Rest_integration_lite ">cdc215d0c347b2107779554d0501311d</sys_scope><sys_update_name>sys_ws_definition_59745994c347b2107779554d050131b3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-02-10 15:39:57</sys_updated_on></sys_ws_definition></record_update>]]></payload>
+<payload_hash>339240103</payload_hash>
+<remote_update_set display_value="Default 1">7a6a2b41c3077a107779554d0501311c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>4b6a2b41c3077a107779554d05013160</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19c4835978d0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<table/>
+<target_name>Incident API</target_name>
+<type>Scripted REST API</type>
+<update_domain>global</update_domain>
+<update_guid>8b7519a47d0736103dde922650682b0a</update_guid>
+<update_guid_history>8b7519a47d0736103dde922650682b0a:339240103,6e841d942d47b210da6afe4bf8c4562f:-1612564601</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_fe532a6243111110110905c02bb8f2d5</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Toggles Auto resolution for KMF Plug-in issues</description><ignore_cache>true</ignore_cache><is_private>false</is_private><name>sn_kmf.resolution_framework.enabled</name><read_roles>maint,admin,sn_kmf.cryptographic_auditor,sn_kmf.cryptographic_integrator,sn_kmf.cryptographic_manager,sn_kmf.cryptographic_operator,sn_kmf.admin</read_roles><suffix>resolution_framework.enabled</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-17 01:33:05</sys_created_on><sys_id>fe532a6243111110110905c02bb8f2d5</sys_id><sys_mod_count>98</sys_mod_count><sys_name>sn_kmf.resolution_framework.enabled</sys_name><sys_package display_value="Key Management Framework" source="com.glide.kmf.global">db3170f3bd3222104f34afdd794b6ad6</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_properties_fe532a6243111110110905c02bb8f2d5</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2026-02-12 08:29:46</sys_updated_on><type>boolean</type><value>true</value><write_roles>maint,sn_kmf.cryptographic_manager,sn_kmf.admin</write_roles></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=fe532a6243111110110905c02bb8f2d5"/></record_update>]]></payload>
+<payload_hash>1275433531</payload_hash>
+<remote_update_set display_value="Default 1">7a6a2b41c3077a107779554d0501311c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>876a2b41c3077a107779554d0501315e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19c50f877a50000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<table/>
+<target_name>sn_kmf.resolution_framework.enabled</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>c936cecd10c73a1016dfd120bc9a5381</update_guid>
+<update_guid_history>c936cecd10c73a1016dfd120bc9a5381:1275433531,dc36cecdb5c73a10d41340da383e085a:-8828164,5a845ba8bbc3761022022b472ccc7396:1275433531,6d845ba8b8c376106b0de438192ef124:-8828164,b02d6a100303f210069f05d1bd716043:1275433531,7f1d2a10e003f210b7b8f9718f47a0ea:-8828164,a55338c01a033210c23c972f8dd0325d:1275433531,c15374c072033210435db707d4ef4796:-8828164,98096b4bb0fe72102bc7725b58ed460c:1275433531,d7f82b4b66fe721073b3350f776cb7bf:-8828164,d3c52f3263323210ffd556c609ccd7e8:1275433531,7ac52f32cd323210342206a5c03aac11:-8828164,ea6660ca45fa3e1061bb6e0446704e6d:1275433531,596660caddfa3e10138a1ba40b680a39:-8828164,be416225277e7a10e41b2d5ba376a09b:1275433531,46416225447e7a1025ed5de8fc5e1a4f:-8828164,610bf1597ff6f6101f7612b8859b3c16:1275433531,700bb15967f6f61016be5f88804f28bd:-8828164,0f8105c1d8b276106603d5e4ea6fbeb9:1275433531,8a8105c120b27610ecd63a80ebd93d60:-8828164,4c15f7683fbab210323c981dd9c60b90:1275433531,9b05f7689ebab21056c4c4d4fb769605:-8828164,7ab4921407323210ab4c2b8e38c24056:1275433531,6ab412148932321056dd43fedbe9fac6:-8828164,2cb43a2233e67210e7a1c02b7901a4a3:1275433531,27a43a221ae67210222404d54d6cb60d:-8828164,7d56f752182232100664d248aee0baef:1275433531,9556b7521f223210a7fb500e065782dc:-8828164,8d1a218677ae7e10db79e4208ecda8b4:1275433531,941a2186e4ae7e10eb01e214ca26ae9a:-8828164,5282f471ba6afa10b9c7e5055285d54c:1275433531,6d82b471f96afa100886c14e5bb962ff:-8828164,4f035c29fea67a100b4d2f88dae50a58:1275433531,c6031c295ca67a100560e4f13fec39f3:-8828164,0d1853cd5a22f61077d73ce24dbeec31:1275433531,d01813cd7022f6105c5ab14da6ff9acc:-8828164,c05b8cb0b5aaf2109f9c9f39bb5374c9:1275433531,cf4b8cb039aaf2106b805fbbc4f9116f:-8828164,00906e188bae32104f993f709bcca7ab:1275433531,52802e18f4ae321009eaaf9cd1a0c0c9:-8828164,ce3a64502c223210ad02b4dcbec747c8:1275433531,293ae0503e22321046a62126511657a3:-8828164,67f10e9b845632104eae5521b4031627:1275433531,4bf10e9bb6563210a0fd66867be6841a:-8828164,5f2e66cb9a927a10eeb725e28bb5bb20:1275433531,b12ee2cb8a927a103f6c75eca017802d:-8828164,64b981b2c21ab610810b499fe5879d9f:1275433531,a7a941b2581ab6103f58c3d0e4690ca4:-8828164,2c97c792fe9af210d3ce33e728ee4cc0:1275433531,3387c792d39af2108d5a90d816027850:-8828164,80804592509ab210e59f6a58c18c7eca:1275433531,cb704592ad9ab210c1bdf4da5974014b:-8828164,a9436f714112321076989a765f26218e:1275433531,81432f71c21232101e978396aba3847b:-8828164,8ae890a17fd6fa105dae437949e400de:1275433531,11e890a124d6fa108708d7b8c775cf22:-8828164,78f3d051da1a7a104fee5977ba365187:1275433531,f7e390513e1a7a10722bf17376b970fc:-8828164,1bd13cb4f59e7610f94f0ad003ca41b7:1275433531,d2d13cb4289e76101a7993bc1973a96b:-8828164,13b80b188ed2f210b48d913e33c06d6d:1275433531,4ab8c71854d2f210b135c6d8879b91ee:-8828164,8850401c28da7210c2e27b60429e6943:1275433531,35408cd8f4da72100fba5e806158dc3c:-8828164,a803f8483f1232109390f1299e7b0203:1275433531,0c03b8481912321097a0100e4b951a15:-8828164,9b5aece31d86fe10de17a33a4231b9d9:1275433531,9e5aece32786fe100fe61fc9e2b13c68:-8828164,99d02adfab46be1085c0dc3ce27b1d0e:1275433531,88d0e6df9746be100289ed67d9199f9c:-8828164,b182a0c7430afa10f6d5a59ad6aa80e4:1275433531,f482a0c7f80afa1084d71edcfb477c8b:-8828164,8e96686e1fcaf610ec56aec351093349:1275433531,5996286e56caf610c2c002cc9c273274:-8828164,c02ff21a33ceb610a79e5e05df38e8c7:1275433531,c71ff21a7cceb610e13ebeb436e8097a:-8828164,9c5c2af9bfceb21025288cd9581a00f0:1275433531,534c2af962ceb21017013d559e405967:-8828164,29760729e0c272103a2270c124832050:1275433531,6876072902c27210dce5bcf7c44a731c:-8828164,fbc72c6581023210309bf696f60ee91e:1275433531,17c7a86529023210a2d9d7a8ce818d1f:-8828164,04bf13b80e02f210bccb2ec2cd25f852:1275433531,0c9f9f787602f210f92ad50b455ec65f:-8828164,8dcde5e8350632106f037b35146f8cce:1275433531,3ccde5e879063210d91f807e3b9c83a9:-8828164,427b01a47902321032f7cdd9c83f7aab:1275433531,e97bcd645b02321007f15b27cfbcc6ca:-8828164,c3c9843d49fd361053ab0c9e0f8a4e30:1275433531,8ec9043d7ffd3610fadc5dda249724dd:-8828164,d9c558ad51b1f2103da4f5c9c13405ee:1275433531,c0c558ad4bb1f210f07df6554f1bad3c:-8828164,e791db0519313210b40b0922c3a505f5:1275433531,5791db0584313210704f8f357a71d7af:-8828164,83a4bff342883210405d0b2d7ab3ca07:1275433531,69a47ff3ae883210f17c2e09534b5efd:-8828164,7e67bd37170032100492ac065ca0afc0:1275433531,5267bd3786003210efa6e726b433cbb7:-8828164,5a67bd37420032108ea5483f884d029a:1275433531</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Rest_integration_lite ">cdc215d0c347b2107779554d0501311d</application>
+<category>customer</category>
+<comments/>
+<name>sys_auth_profile_basic_4fe4b1e0c30b36107779554d05013110</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_auth_profile_basic"><sys_auth_profile_basic action="INSERT_OR_UPDATE"><name>incident_out</name><password>﷞﷟﷒5cb1f301c3f932107779554d0501314a﷬﷔1﷬﷭KB1EBQg4UjiDMzY5VffMoQ==xnedofIdZ2AzYR9BKS0gjwBC6tCjgg==﷮﷯</password><sys_class_name>sys_auth_profile_basic</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-02-10 17:57:39</sys_created_on><sys_id>4fe4b1e0c30b36107779554d05013110</sys_id><sys_mod_count>0</sys_mod_count><sys_name>incident_out</sys_name><sys_package display_value="Rest_integration_lite " source="cdc215d0c347b2107779554d0501311d">cdc215d0c347b2107779554d0501311d</sys_package><sys_policy/><sys_scope display_value="Rest_integration_lite ">cdc215d0c347b2107779554d0501311d</sys_scope><sys_update_name>sys_auth_profile_basic_4fe4b1e0c30b36107779554d05013110</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-02-10 17:57:39</sys_updated_on><username>incident</username></sys_auth_profile_basic></record_update>]]></payload>
+<payload_hash>-214290227</payload_hash>
+<remote_update_set display_value="Default 1">7a6a2b41c3077a107779554d0501311c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>8b6a2b41c3077a107779554d0501311e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19c48b3a7e80000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<table/>
+<target_name>incident_out</target_name>
+<type>Basic Auth Configuration</type>
+<update_domain>global</update_domain>
+<update_guid>0c05b1e0030b3610293c83df78ab231e</update_guid>
+<update_guid_history>0c05b1e0030b3610293c83df78ab231e:-214290227</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Rest_integration_lite ">cdc215d0c347b2107779554d0501311d</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_bd81eeb4c30fb6107779554d050131b9</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;false&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;false&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;incident&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition table="incident"&gt;priority=1^EQ&lt;item display_value="1 - Critical" endquery="false" field="priority" goto="false" newquery="false" operator="=" or="false" value="1"/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/filter_condition&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;Inc- send incident outbound &lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-02-11 15:51:46&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;bd81eeb4c30fb6107779554d050131b9&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Inc- send incident outbound &lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Rest_integration_lite " source="cdc215d0c347b2107779554d0501311d"&gt;cdc215d0c347b2107779554d0501311d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Rest_integration_lite "&gt;cdc215d0c347b2107779554d0501311d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_bd81eeb4c30fb6107779554d050131b9&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-02-11 15:51:46&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;after&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=bd81eeb4c30fb6107779554d050131b9"/&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;bd81eeb4c30fb6107779554d050131b9&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-02-11 15:51:45&lt;/sys_created_on&gt;&lt;sys_id&gt;e5c126f4c30fb6107779554d050131c1&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-02-11 15:51:45&lt;/sys_updated_on&gt;&lt;table&gt;sys_script&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-830024798</payload_hash>
+<remote_update_set display_value="Default 1">7a6a2b41c3077a107779554d0501311c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>8b6a2b41c3077a107779554d0501315f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19c4d66c3da0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<table>incident</table>
+<target_name>Inc- send incident outbound </target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_guid>bdc1e6f43d0fb61015a02b98377571ab</update_guid>
+<update_guid_history>bdc1e6f43d0fb61015a02b98377571ab:-830024798</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Rest_integration_lite ">cdc215d0c347b2107779554d0501311d</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_90251118c347b2107779554d05013107</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl/&gt;&lt;http_method&gt;POST&lt;/http_method&gt;&lt;name&gt;incident_api &lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    try {
+        var body = request.body.data;
+
+        if (!body.short_description) {
+            response.setStatus(400);
+            response.setBody({
+                error: 'short description is requried!'
+            });
+        }
+
+        var inc = new GlideRecord('incident');
+        inc.initialize();
+        inc.short_description = body.short_description;
+        inc.description = body.description || '';
+        inc.impact = body.impact || 3;
+        inc.urgency = body.urgency || 3;
+        inc.caller_id = gs.getUserID;
+        var incSysId = inc.insert();
+
+        response.setStatus(201);
+        response.setBody({
+            message: 'incident created',
+            number: inc.number,
+            sys_id: incSysId
+        });
+    } catch (ex) {
+        response.setStatus(500);
+        response.setBody({
+            error: ex.message
+        });
+    }
+
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/884051/incident_api/create&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/create&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;true&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;requires_snc_internal_role&gt;true&lt;/requires_snc_internal_role&gt;&lt;short_description/&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-02-09 22:06:01&lt;/sys_created_on&gt;&lt;sys_id&gt;90251118c347b2107779554d05013107&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;incident_api &lt;/sys_name&gt;&lt;sys_package display_value="Rest_integration_lite " source="cdc215d0c347b2107779554d0501311d"&gt;cdc215d0c347b2107779554d0501311d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Rest_integration_lite "&gt;cdc215d0c347b2107779554d0501311d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_90251118c347b2107779554d05013107&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-02-10 15:42:02&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="Incident API"&gt;59745994c347b2107779554d050131b3&lt;/web_service_definition&gt;&lt;web_service_version/&gt;&lt;/sys_ws_operation&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;90251118c347b2107779554d05013107&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-02-09 22:05:56&lt;/sys_created_on&gt;&lt;sys_id&gt;5734691cc387b2107779554d05013140&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-02-09 22:05:56&lt;/sys_updated_on&gt;&lt;table&gt;sys_ws_operation&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-671684293</payload_hash>
+<remote_update_set display_value="Default 1">7a6a2b41c3077a107779554d0501311c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>8f6a2b41c3077a107779554d05013160</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19c48377ef00000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<table/>
+<target_name>incident_api </target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_guid>99f519e4de0736101855d63a4d1d3acf</update_guid>
+<update_guid_history>99f519e4de0736101855d63a4d1d3acf:-671684293,905465d03847b2106baffd1df01fa014:-1937004466,ac442154b8c7b21043c9fe906d292c02:-1142928973</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Rest_integration_lite ">cdc215d0c347b2107779554d0501311d</application>
+<category>customer</category>
+<comments/>
+<name>sys_rest_message_db04f560c30b36107779554d05013159</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message"><sys_rest_message action="INSERT_OR_UPDATE"><access>package_private</access><authentication_type>basic</authentication_type><basic_auth_password/><basic_auth_profile display_value="incident_out">4fe4b1e0c30b36107779554d05013110</basic_auth_profile><basic_auth_user/><description/><name>Send incident Out </name><oauth2_profile/><protocol_name/><rest_endpoint>https://jsonplaceholder.typicode.com/posts</rest_endpoint><sys_class_name>sys_rest_message</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-02-10 17:57:44</sys_created_on><sys_id>db04f560c30b36107779554d05013159</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Send incident Out </sys_name><sys_package display_value="Rest_integration_lite " source="cdc215d0c347b2107779554d0501311d">cdc215d0c347b2107779554d0501311d</sys_package><sys_policy/><sys_scope display_value="Rest_integration_lite ">cdc215d0c347b2107779554d0501311d</sys_scope><sys_update_name>sys_rest_message_db04f560c30b36107779554d05013159</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-02-10 17:57:44</sys_updated_on><use_basic_auth>false</use_basic_auth><use_mutual_auth>false</use_mutual_auth></sys_rest_message></record_update>]]></payload>
+<payload_hash>994622261</payload_hash>
+<remote_update_set display_value="Default 1">7a6a2b41c3077a107779554d0501311c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>cb6a2b41c3077a107779554d0501315e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19c48b3bbc40000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<table/>
+<target_name>Send incident Out </target_name>
+<type>REST Message</type>
+<update_domain>global</update_domain>
+<update_guid>d50575e0570b3610143653684bd17f8e</update_guid>
+<update_guid_history>d50575e0570b3610143653684bd17f8e:994622261</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Virtual_agent_lite ">72db5854c30f72107779554d050131c3</application>
+<category>customer</category>
+<comments/>
+<name>sys_cb_design_topic_23412c10c34f72107779554d050131ff</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic"><sys_cb_design_topic action="INSERT_OR_UPDATE"><compiled_topic display_value="_PRVW__3b3aa42ad8b5404ab1641662fffeb899">63412c10c34f72107779554d050131b5</compiled_topic><design_definition>{"type":"FlowTopic","triggers":[{"type":"Trigger","name":"6e88ef3dd7564dee91a95e6b85ee5828","triggerType":"request","applicability":{"type":"Applicability","mode":"script","value":"true"},"id":"6e88ef3dd7564dee91a95e6b85ee5828"}],"goals":[{"name":"primary","trigger_id":"6e88ef3dd7564dee91a95e6b85ee5828","nodes":[{"type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","mode":"string","value":""},"id":"4604818314fc47ea924b095101cbf818","name":"Start","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","mode":"string","value":""},"id":"034cd8010de1459fa958bd7d9e79b042","name":"End","expert_mode":false},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"script","value":"(function execute() {\n    return gs.getMessageLang(\"Welcome to Now Virtual Agent. I'm here to help you. To begin, click Start or type hi. Anytime you want to start over, type restart.\", vaContext.getRequesterLang())\n})()\n"}],"request_feedback":true,"isCollapsible":true,"id":"3c5076fd593a4413b32a37efa43eda8e","name":"Welcome message","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"secure":false}],"edges":[{"type":"Edge","source_node_id":"3c5076fd593a4413b32a37efa43eda8e","target_node_id":"034cd8010de1459fa958bd7d9e79b042","id":"be808560c9b245e4944028c248800416"},{"type":"Edge","source_node_id":"4604818314fc47ea924b095101cbf818","target_node_id":"3c5076fd593a4413b32a37efa43eda8e","id":"38bbbb93904d41f0bed8a1a60f99af6d"}],"id":"primary"}],"script_variables":[],"glide_variables":[{"type":"Reference","table":"sys_user","auto_select":false,"id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false}],"applicability":{"type":"Applicability","mode":"script","value":"true"},"roles":["public"],"scope":"global","domain":"global","topic_type":"STANDARD","channels":[],"dialog_acts_enabled":false,"id":"3073d70953912210ee61833230e5e612","name":"_PRVW__3b3aa42ad8b5404ab1641662fffeb899","key_phrases":["_first_installation_"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":false,"autopilot_topic":false,"design_categories":[],"triggerable_by_notification":false,"model_type":"nlu_keyword","foundational":false,"modify_confirmation_enabled":false,"context_profiles":[],"title":"_first_installation_","library":false,"csTopicId":"1bb39f0953912210ee61833230e5e6ed","readOnly":true,"nluMapping":"[]"}</design_definition><design_topic_id>3073d70953912210ee61833230e5e612</design_topic_id><graph>{
+  "graph_api_version": "1.0.78",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "4604818314fc47ea924b095101cbf818": {
+          "id": "4604818314fc47ea924b095101cbf818",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "034cd8010de1459fa958bd7d9e79b042": {
+          "id": "034cd8010de1459fa958bd7d9e79b042",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "3c5076fd593a4413b32a37efa43eda8e": {
+          "id": "3c5076fd593a4413b32a37efa43eda8e",
+          "stepType": "TextOutput",
+          "name": "Welcome message",
+          "secure": false,
+          "value": [
+            {
+              "value": "(function execute() {\n    return gs.getMessageLang(\"Welcome to Now Virtual Agent. I'm here to help you. To begin, click Start or type hi. Anytime you want to start over, type restart.\", vaContext.getRequesterLang())\n})()\n",
+              "mode": "script"
+            }
+          ],
+          "isCollapsible": true,
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "be808560c9b245e4944028c248800416",
+          "edgeType": "Edge",
+          "source": "3c5076fd593a4413b32a37efa43eda8e",
+          "target": "034cd8010de1459fa958bd7d9e79b042",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "38bbbb93904d41f0bed8a1a60f99af6d",
+          "edgeType": "Edge",
+          "source": "4604818314fc47ea924b095101cbf818",
+          "target": "3c5076fd593a4413b32a37efa43eda8e",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    }
+  }
+}</graph><name>_PRVW__3b3aa42ad8b5404ab1641662fffeb899</name><sys_class_name>sys_cb_design_topic</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-02-09 17:13:30</sys_created_on><sys_domain>global</sys_domain><sys_id>23412c10c34f72107779554d050131ff</sys_id><sys_mod_count>0</sys_mod_count><sys_name>FlowTopic</sys_name><sys_package display_value="Virtual_agent_lite " source="72db5854c30f72107779554d050131c3">72db5854c30f72107779554d050131c3</sys_package><sys_policy/><sys_scope display_value="Virtual_agent_lite ">72db5854c30f72107779554d050131c3</sys_scope><sys_update_name>sys_cb_design_topic_23412c10c34f72107779554d050131ff</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-02-09 17:13:30</sys_updated_on><type>FlowTopic</type></sys_cb_design_topic></record_update>]]></payload>
+<payload_hash>762418542</payload_hash>
+<remote_update_set display_value="Default 1">7a6a2b41c3077a107779554d0501311c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>cf6a2b41c3077a107779554d0501311e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19c4364e1dd0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<table/>
+<target_name>FlowTopic</target_name>
+<type>Published Topic</type>
+<update_domain>global</update_domain>
+<update_guid>ab416c100f4f7210070261bb9132fd02</update_guid>
+<update_guid_history>ab416c100f4f7210070261bb9132fd02:762418542</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_upgrade_plan_item_0b447c14c343b2107779554d050131e9</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_upgrade_plan_item"><sys_upgrade_plan_item action="INSERT_OR_UPDATE"><active>true</active><additional_parameters/><auto_generated>false</auto_generated><customization_version/><id>com.snc.universal_request.va</id><last_published/><last_refreshed/><name>Universal Request: Virtual Agent Conversations</name><notes/><scope>sn_uni_req_va</scope><source/><state/><status_message/><sys_class_name>sys_upgrade_plan_item</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-02-09 18:36:29</sys_created_on><sys_id>0b447c14c343b2107779554d050131e9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Universal Request: Virtual Agent Conversations</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_upgrade_plan_item_0b447c14c343b2107779554d050131e9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-02-09 18:36:29</sys_updated_on><type>plugin</type><upgrade_plan/><version>1.0.0</version></sys_upgrade_plan_item></record_update>]]></payload>
+<payload_hash>25902701</payload_hash>
+<remote_update_set display_value="Default 1">7a6a2b41c3077a107779554d0501311c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-02-12 15:47:38</sys_created_on>
+<sys_id>cf6a2b41c3077a107779554d0501315f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19c43b0d9d10000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-02-12 15:47:38</sys_updated_on>
+<table/>
+<target_name>Universal Request: Virtual Agent Conversations</target_name>
+<type>App Install</type>
+<update_domain>global</update_domain>
+<update_guid>cf447c14b543b2100031cd31246db4ed</update_guid>
+<update_guid_history>cf447c14b543b2100031cd31246db4ed:25902701</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
